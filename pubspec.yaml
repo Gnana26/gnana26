@@ -1,0 +1,41 @@
+name: projects
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.4 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_local_notifications: ^18.0.1
+  async: ^2.12.0  # Update to the latest version
+  collection: 1.18.0  # Pinning to 1.18.0 to avoid conflict with flutter_test
+  # Add other dependencies if required...
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0  # Latest stable version of flutter_lints
+  # Update other dev dependencies similarly
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/app_logo.png
+    # Additional assets
+    # - assets/images/logo.png
+    # - assets/icons/icon.png
+
+  # Fonts (Optional)
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: fonts/CustomFont-Regular.ttf
+  #       - asset: fonts/CustomFont-Bold.ttf
+  #         weight: 700

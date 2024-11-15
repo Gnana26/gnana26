@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"  // Keep this only if you're using Kotlin. If not, you can remove this line.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.projects"  // This must match your applicationId in the AndroidManifest
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11  // Updated to Java 11, as Java 8 is deprecated
+        targetCompatibility = JavaVersion.VERSION_11  // Updated to Java 11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11  // Updated to Java 11
+    }
+
+    defaultConfig {
+        applicationId = "com.example.projects"  // This should match your package name
+        minSdk = flutter.minSdkVersion  // Min SDK version for your app
+        targetSdk = flutter.targetSdkVersion  // Target SDK version for your app
+        versionCode = flutter.versionCode  // Increment with each release
+        versionName = flutter.versionName  // This is the app version shown to users
+    }
+
+    buildTypes {
+        release {
+            // Disable R8 minification to avoid conflicts during release build
+            minifyEnabled false  // Disable R8 minification to resolve conflicts
+            shrinkResources false // Disable resource shrinking (if necessary)
+            signingConfig = signingConfigs.debug  // TODO: Set your own signing config for release
+
+            // Optional: You can customize Proguard rules here if you need to
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source = "../.."  // Path to your Flutter SDK (relative path from this project)
+}
