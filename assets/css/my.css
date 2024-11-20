@@ -1,0 +1,418 @@
+
+:root {
+    --tg-body-font-family: 'Plus Jakarta Sans', sans-serif;;
+    --tg-heading-font-family: 'Plus Jakarta Sans', sans-serif;;
+    --tg-heading2-font-family: 'Manrope', sans-serif;;
+    --tg-icon-font-family: "Font Awesome 5 Free";
+    --tg-body-font-size: 16px;
+    --tg-body-line-height: 1.75;
+    --tg-heading-line-height: 1.2;
+    --tg-body-color: #1F2933;
+    --tg-heading-color: #00233D;
+    --tg-theme-primary: #0064B0;
+    --tg-theme-secondary: #009BB0;
+    --tg-color-dark-blue: #0E104B;
+    --tg-color-dark-blue-2: #001950;
+    --tg-color-light-blue: #7149D2;
+    --tg-color-yellow-default: #FFA800;
+    --tg-color-yellow-light: #F9EADC;
+    --tg-color-white-default: #ffffff;
+    --tg-color-red-default: #ED1730;
+    --tg-color-gray-1: #EBF6FF;
+    --tg-color-gray-2: #67687A;
+    --tg-color-gray-3: #F3F8FE;
+    --tg-color-gray-4: #ECEDE5;
+    --tg-color-gray-5: #F6F6F8;
+    --tg-color-gray-6: #D0DAEF;
+    --tg-color-gray-7: #9399A6;
+    --tg-color-dark: #000000;
+    --tg-color-black-1: #060606;
+    --tg-color-black-2: #161439;
+    --tg-border-1: #C8C2C8;
+    --tg-border-2: #D0CACA;
+    --tg-border-3: #CCD2E1;
+    --tg-border-4: #DBE3EB;
+    --tg-border-5: #F8F8F8;
+    --tg-border-6: #E6E6E6;
+    --tg-fw-extra-bold: 800;
+    --tg-fw-bold: 700;
+    --tg-fw-semi-bold: 600;
+    --tg-fw-medium: 500;
+    --tg-fw-regular: 400;
+    --tg-fw-light: 300;
+  }
+  
+  /*=============================
+      Typography css start
+  ===============================*/
+  
+  body.theme-yellow2 {
+    --tg-theme-primary: #ECFF9F;
+    --tg-theme-secondary: #EDC6FF;
+    --tg-heading-color: #1C1C29;
+  }
+  
+  img {
+    max-width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  
+  h1 {
+    color: var(--tg-heading-color);
+    margin-top: 0px;
+    font-weight: var(--tg-fw-bold);
+    line-height: var(--tg-heading-line-height);
+    text-transform: unset;
+  }
+  
+  h1 {
+    font-size: 53px;
+  }
+  @media (max-width: 1399px) {
+    h1 {
+      font-size: 43px;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    h1 {
+      font-size: 32px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    h1 {
+      font-size: 26px;
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    h1 {
+      font-size: 46px;
+    }
+  }
+  
+  *::-moz-selection {
+    background: var(--tg-theme-primary);
+    color: var(--tg-color-white-default);
+    text-shadow: none;
+  }
+  
+  ::-moz-selection {
+    background: var(--tg-theme-primary);
+    color: var(--tg-color-white-default);
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: var(--tg-theme-primary);
+    color: var(--tg-color-white-default);
+    text-shadow: none;
+  }
+  
+  /*=============================
+      - Input Placeholder
+  ===============================*/
+  
+  *::-moz-placeholder {
+    color: var(--tg-body-color);
+    font-size: var(--tg-body-font-size);
+    opacity: 1;
+  }
+  
+  /*=============================
+      - Common Classes
+  ===============================*/
+  
+  /*=============================
+      - Bootstrap Custom
+  =============================*/
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    --bs-gutter-x: 30px;
+  }
+  
+  .container {
+    max-width: 1320px;
+  }
+  @media (max-width: 1500px) {
+    .container {
+      max-width: 1250px;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  /*=============================
+      02. Button style
+  ===============================*/
+  .btn:has(.icon-btn) {
+    padding: 8px 8px 8px 23px;
+    gap: 20px;
+  }
+  .btn:focus-visible {
+    background: var(--tg-theme-primary);
+    color: var(--tg-color-white-default) !important;
+  }
+  .btn:focus-visible:before {
+    top: -40%;
+  }
+  .btn:focus-visible svg path:nth-of-type(1) {
+    transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+    opacity: 0;
+    transition-delay: 0s, 0s;
+  }
+  .btn:focus-visible svg path:nth-of-type(2) {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+    transition-delay: 0.15s, 0.15s;
+  }
+  .social-icon-wrap.style3 a:has(.fa-facebook-f) {
+    background: #4676ED;
+    display: flex;
+    align-items: end;
+  }
+  .social-icon-wrap.style3 a:has(.fa-pinterest-p) {
+    background: #C40027;
+    display: flex;
+    align-items: end;
+  }
+  .social-icon-wrap.style3 a:has(.fa-linkedin-in) {
+    background: #4467AD;
+    font-size: 15px;
+  }
+  .social-icon-wrap.style3 a:has(.fa-twitter) {
+    background: #5A99EC;
+    font-size: 15px;
+  }
+  
+  
+  /*=============================
+      Input
+  ===============================*/
+  .form-group:has(.form-icon-left) textarea,
+  .form-group:has(.form-icon-left) input {
+    padding-left: 33px;
+  }
+  
+  .hero-3 {
+    text-align: center;
+    background-position: top;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-3 .hero-thumb3-1 {
+    position: relative;
+  }
+  .hero-3 .hero-shape3-1 {
+    position: absolute;
+    right: 18%;
+    top: 13%;
+    z-index: -1;
+  }
+  @media (max-width: 1800px) {
+    .hero-3 .hero-shape3-1 {
+      right: 10%;
+      top: 18%;
+    }
+  }
+  @media (max-width: 1500px) {
+    .hero-3 .hero-shape3-1 {
+      width: 350px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .hero-3 .hero-shape3-1 {
+      right: 6%;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    .hero-3 .hero-shape3-1 {
+      right: 10%;
+    }
+  }
+  .hero-3 .hero-shape3-2 {
+    position: absolute;
+    left: 30%;
+    top: 13%;
+    z-index: -1;
+  }
+  @media (max-width: 1800px) {
+    .hero-3 .hero-shape3-2 {
+      top: 13%;
+    }
+  }
+  .hero-3 .hero-shape3-4 {
+    position: absolute;
+    right: 16%;
+    bottom: 14%;
+  }
+  .hero-3 .hero-shape3-5 {
+    position: absolute;
+    left: 0%;
+    bottom: 5%;
+  }
+  @media (max-width: 1199.98px) {
+    .hero-3 .hero-shape3-5 {
+      left: 3%;
+      width: 120px;
+    }
+  }
+  .hero-3 .hero-shape3-6 {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+  }
+  @media (max-width: 991.98px) {
+    .hero-3 .hero-shape3-6 {
+      left: 10%;
+      top: 45%;
+    }
+  }
+  .hero-3 .hero-shape3-7 {
+    position: absolute;
+    right: 14%;
+    top: 28%;
+  }
+  @media (max-width: 1200px) {
+    .hero-3 .hero-shape3-7 {
+      right: 4%;
+    }
+  }
+  .hero-3 .hero-shape3-8 {
+    position: absolute;
+    right: 5%;
+    top: -13%;
+  }
+  .hero-3 .hero-shape3-9 {
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+  }
+  .hero-3 .hero-shape3-10 {
+    position: absolute;
+    right: 0%;
+    bottom: 30%;
+  }
+  
+  .hero-style3 {
+    padding-top: 150px;
+  }
+  @media (max-width: 991.98px) {
+    .hero-style3 {
+      padding-top: 165px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .hero-style3 {
+      padding-top: 40px;
+    }
+    .custom-pb-2 {
+      padding-bottom: 7rem !important;
+  }
+
+  .btn{
+    padding: 16px 42px;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.custom-pb-3 {
+  padding-bottom: 12rem !important;
+}
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .hero-style3 {
+      padding-top: 165px;
+    }
+  }
+  .hero-style3 .hero-title span {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-style3 .hero-title span:after {
+    content: "";
+    position: absolute;
+    height: 16px;
+    background: var(--tg-theme-secondary);
+    bottom: 10px;
+    left: 0;
+    z-index: -1;
+    right: -4px;
+  }
+  @media (max-width: 1199.98px) {
+    .hero-style3 .hero-title span:after {
+      bottom: 0px;
+    }
+  }
+  
+  
+  /*=============================
+      40. Keyframe Animation
+  ===============================*/
+  .jump {
+    animation: jumpAni 7s linear infinite;
+  }
+  
+  @keyframes jumpAni {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .jump-reverse {
+    animation: jumpReverseAni 7s linear infinite;
+  }
+  
+  @keyframes jumpReverseAni {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .spin {
+    animation: spin 15s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
